@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section{
+    width: 80%;
+    height: 40vh;
+    min-height: 300px;
+    background-color: #eeeeee;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0,70%);
+    
+
+}
+.container{
+    width: 90%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+article{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.hr{
+    height: 90%;
+    width: 2px;
+    background-color: blueviolet;
+}
+
+h1{
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 0px 4px 4px rgba(124, 73, 196, 0.25);
+
+}
+p{
+    font-style: italic;
+    line-height: 25px;
+}
+
+button{
+    width: 160px;
+    color:#F8F8FF ;
+    border: none;
+    background-color: #7c49c4;
+    padding: 10px;
+    border-radius: 8px;
+    transition: .4s;
+}
+
+button:hover{
+    background-color: #F8F8FF;
+    color: #7c49c4;
+    transition: .4s;
+}
+
+@media screen and (max-width:1600px) {
+    h1{
+        font-size: 25px;
+    
+    }
+    p{
+        font-size: 15px;
+    }
+}
+button{
+    font-size: 15px;
+}
+
+@media screen and (max-width:1400px) {
+    .container{
+        width: 95%;
+    }
+    
+}
+
+@media screen and (max-width:1300px) {
+    section{
+        width: 40%;
+        height: 90vh;
+        min-height: 800px;
+        transform: initial;
+    }
+    .container{
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+    .hr{
+        height: 1.8px;
+        width: 80%;
+        background-color: blueviolet;
+    }
+    article{
+        height: 28%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+    }
+    
+}
+@media screen and (max-width:900px){
+    section{
+        width: 50%;
+        height: 120vh;
+    }
+    .container{
+        height:95%;
+    }
+    br{
+        display: none;
+    }
+}
+@media screen and (max-width:700px){
+    section{
+        width: 70%;
+    }
+}
+@media screen and (max-width:400px) {
+    section{
+        width: 80%;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+/* **********************VERTICAL-ALIN PROB********************************** */
+
+
+@media screen and (max-height:750px) and (min-width:1300px) {
+
+    section{
+        transform: translate(0,50%);
+    }
+    
+}
+@media screen and (max-height:600px) and (min-width:1300px){
+    section{
+        transform: translate(0,30%);
+    }
+    
+}
+@media screen and (max-height:500px) and (min-width:1300px){
+    section{
+        transform: translate(0,20%);
+    }
+    
+}
+@media screen and (max-height:400px) and (min-width:1300px){
+    section{
+        transform: translate(0,10%);
+    }
+    
+}
