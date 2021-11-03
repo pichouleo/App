@@ -113,6 +113,7 @@ aside{
 }
 input{
     border: none;
+    outline: none;
 }
 .aside-first{
     margin-top: 50px;
@@ -170,5 +171,8 @@ section img{
         
         margin: auto;
         margin-top: 40px;
+    }
+    section h1{
+        font-size: 2rem;
     }
 }
