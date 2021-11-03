@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,400;1,700&display=swap');
+@font-face {
+    font-family:"Nimbus bold" ;
+    src: url(/nimbus-sans-d-ot-cufonfonts/Nimbus-Sans-D-OT-Bold_32747.ttf);
+}
+@font-face {
+    font-family:"Nimbus light" ;
+    src: url(/nimbus-sans-d-ot-cufonfonts/Nimbus-Sans-D-OT-Light_32752.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    list-style: none;
+
+}
+a:visited{
+    color: #122448;
+}
+
+nav{
+    height: 70px;
+}
+.container_navbar{
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    
+}
+nav a {
+    display: inline-block;
+    position: relative;
+    color: #122448;
+  }
+  
+  nav a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffb34d;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  nav a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+nav img{
+    height: 80%;
+}
+@media (max-width:750px){
+    nav{
+        height: 110px;
+    }
+    .container_navbar{
+        flex-direction: column;
+        height: 90%;
+        transform: translate(0,10%);
+    }
+    nav img{
+        height: 60px;
+    }
+    nav ul{
+        width: 300px;
+    }
+}
+
+section{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding-top: 3%;
+    width: 75%;
+    text-align: center;
+}
+form{
+    width: 500px;
+    height: 600px;
+    margin-top: 70px;
+}
+form h1{
+    color: #122448;
+    font-size: 2.4rem;
+}
+form h1 span{
+    color: #008379;
+}
+.hr{
+    height: 1px;
+    width: 60%;
+    background-color: #ffb34d;
+    margin: auto;
+}
+aside{
+    margin: 30px;
+}
+input{
+    border: none;
+}
+.aside-first{
+    margin-top: 50px;
+}
+
+::placeholder, i{
+    color: grey;
+}
+i{
+    margin-right: 20px;
+}
+
+button{
+    margin-top: 20px;
+    border: 1px solid #008379;
+    background: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    color: #008379;
+    cursor: pointer;
+    transition: .4s;
+}
+button:hover{
+    background:#008379 ;
+    color: white;
+    transition: .4s;
+}
+section img{
+    height: 600px;
+}
+
+@media (max-width:1300px){
+    section{
+        padding-top: 0%;
+        width: 90%;
+    }
+    form h1{
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width:1000px){
+    section img{
+        margin-top: 90px;
+        width: initial;
+        height: 400px;
+    }
+}
+@media (max-width:800px){
+    section img{
+        display: none;
+    }
+    form{
+        height: 410px;
+        
+        margin: auto;
+        margin-top: 40px;
+    }
+}
