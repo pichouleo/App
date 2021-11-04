@@ -173,6 +173,7 @@ section img{
     height: 55px;
     cursor: pointer;
     appearance: none;
+    attachment:none;
     -moz-appearance: none;
     -webkit-appearance: none;
     outline: none;
