@@ -1,22 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,400;1,700&display=swap');
 
+@font-face {
+    font-family:"Monserrat SemiBold", sans-serif ;
+    src: url(Montserrat/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+    font-family:"MontserratRegular" ;
+    src: url(Montserrat/Montserrat-Regular.ttf);
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
     text-decoration: none;
     list-style: none;
+}
 
-}
-a:visited{
-    color: #122448;
-}
+/* ***********************************NAVBAR******************************** */
 
 nav{
     height: 70px;
+    font-family: "Montserrat", sans-serif;
 }
-.container_navbar{
+
+.navbarContainer{
     height: 100%;
     width: 80%;
     margin: auto;
@@ -24,19 +32,20 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
+
 nav ul{
     display: flex;
     justify-content: space-between;
-    width: 400px;
-    
+    width: 400px; 
 }
-nav a {
+
+nav a.no-active{
     display: inline-block;
     position: relative;
     color: #122448;
   }
   
-  nav a:after {
+  nav a.no-active:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -49,7 +58,7 @@ nav a {
     transition: transform 0.25s ease-out;
   }
   
-  nav a:hover:after {
+  nav a.no-active:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
@@ -58,21 +67,187 @@ nav img{
     height: 80%;
 }
 
+nav a:visited{
+    color: #122448;
+}
 
+nav .is-active{
+    text-decoration: underline 2px #ffb34d;
+}
+
+/* ***************************************ABOUT ME************************************ */
+
+.aboutMe{
+    width: 800px;
+    height: 65vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:auto;
+    transform:translate(0,12%) ;
+    color: #333;
+}
+
+.profilCart{
+    width: 350px;
+    height: 500px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 50px -10px #333 ;
+}
+.profilCartContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    height: 400px;
+    margin: auto;
+    transform: translate(0,8%);
+}
+
+.profilCart img{
+    width: 100px;
+    margin: auto;
+    border-radius: 50px;
+}
+
+.profilCart p{
+    width: 100%;
+    margin: auto;
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    line-height: 28px;
+    color: rgb(134, 134, 134);
+    margin-top: -10px;
+}
+
+.profilCart h2{
+    font-family:"Monserrat SemiBold", sans-serif ;
+    font-size: 1.3rem;
+    margin-bottom:10px;
+}
+
+.profilCart h3{
+    font-family:"Montserrat", sans-serif ;
+    font-size: 0.9rem;
+}
+.textAbout{
+    width: 400px;
+    height: 500px;
+    text-align: left;
+}
+
+.textAboutContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 300px;
+    margin: auto;
+    transform: translate(0,12%);
+}
+
+.textAboutContainer h2{
+    color: rgb(187, 187, 187);
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    letter-spacing: 2px;
+    font-size: 1rem;
+}
+
+.textAboutContainer h1{
+    font-size: 2rem;
+    font-family: "Montserrat";
+    margin-top: 30px;
+}
+
+.textAboutContainer h1 span{
+    color: #008379;
+    font-style: italic;
+}
+
+.textAboutContainer p{
+    width: 100%;
+    margin: auto;
+    font-family:"MontserratRegular" ;
+    font-size: 0.8rem;
+    line-height: 25px;
+    color: rgb(70, 70, 70);
+}
+
+.textAboutContainer button{
+    background-color: #008379;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #008379;
+    transition: all .4s;
+}
+
+.textAboutContainer button:hover{
+    background-color: white;
+    border: 1px solid #008379;
+    color: #008379;
+}
+
+/* **********************************RESPONSIVE***************************** */
 
 @media (max-width:750px){
+
     nav{
         height: 110px;
     }
-    .container_navbar{
+
+    .navbarContainer{
         flex-direction: column;
         height: 90%;
         transform: translate(0,10%);
     }
+
     nav img{
         height: 60px;
     }
+
     nav ul{
         width: 300px;
+    }
+}
+
+@media (max-width:900px){
+
+    .aboutMe{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        transform:translate(0,0%) ;
+    }
+
+    .profilCart, .textAbout{
+        margin: 30px auto;
+    }
+
+}
+
+@media (max-width:450px){
+
+    .aboutMe{
+        width: 95%;
+    }
+
+    .profilCart, .textAbout{
+        width: 290px;
+    height: 500px;
+        
+    }
+    .profilCartContainer{
+        width: 92%;
+    }
+}
+
+@media (min-height:1000px) and (min-width:901px){
+
+    .aboutMe{
+        transform:translate(0,40%) ;
     }
 }

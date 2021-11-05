@@ -9,22 +9,17 @@
     text-decoration: none;
 }
 
-.content{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+/* **********************************************************************NAVBAR*************************************************** */
 
-}
-a:visited{
+nav a:visited{
     color: #122448;
 }
 
 nav{
     height: 70px;
 }
-.container_navbar{
+
+.navbarContainer{
     height: 100%;
     width: 80%;
     margin: auto;
@@ -32,19 +27,20 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
+
 nav ul{
     display: flex;
     justify-content: space-between;
     width: 400px;
-    
 }
-nav a {
+
+nav a.no-active{
     display: inline-block;
     position: relative;
     color: #122448;
-  }
+}
   
-  nav a:after {
+nav a.no-active:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -55,32 +51,22 @@ nav a {
     background-color: #ffb34d;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
-  }
+}
   
-  nav a:hover:after {
+nav a.no-active:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
-  }
+}
 
 nav img{
     height: 80%;
 }
-@media (max-width:750px){
-    nav{
-        height: 110px;
-    }
-    .container_navbar{
-        flex-direction: column;
-        height: 90%;
-        transform: translate(0,10%);
-    }
-    nav img{
-        height: 60px;
-    }
-    nav ul{
-        width: 300px;
-    }
+
+nav .is-active{
+    text-decoration: underline 2px #ffb34d;
 }
+
+/* *******************************************************************************CONTENT************************************************ */
 
 section{
     width: 80%;
@@ -92,11 +78,18 @@ section{
     align-items: center;
     justify-content: center;
     transform: translate(0,70%);
-    background-color: #f2f2f2;
-    
-
+    box-shadow: 0px 0px 15px 1px #333;
 }
-.container{
+
+.content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contentContainer{
     width: 90%;
     height: 70%;
     display: flex;
@@ -104,12 +97,12 @@ section{
     align-items: center;
     justify-content: space-between;
 }
+
 article{
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 
 .hr{
@@ -119,12 +112,12 @@ article{
 }
 
 h1{
-    font-size: 30px;
+    font-size: 2.4rem;
     font-weight: bold;
     font-style: italic;
     color: #333;
-
 }
+
 p{
     font-style: italic;
     line-height: 25px;
@@ -139,6 +132,8 @@ button{
     padding: 10px;
     border-radius: 8px;
     transition: .4s;
+    font-size: 15px;
+    cursor: pointer;
 }
 
 button:hover{
@@ -147,22 +142,17 @@ button:hover{
     transition: .4s;
 }
 
+/* **********************************************************************************RESPONSIVE******************************************************** */
+
 @media screen and (max-width:1600px) {
-    h1{
-        font-size: 25px;
     
-    }
     p{
         font-size: 15px;
     }
 }
-button{
-    font-size: 15px;
-    cursor: pointer;
-}
 
 @media screen and (max-width:1400px) {
-    .container{
+    .contentContainer{
         width: 95%;
     }
     
@@ -176,7 +166,7 @@ button{
         transform: initial;
         margin: 50px 0;
     }
-    .container{
+    .contentContainer{
         width: 90%;
         height: 90%;
         display: flex;
@@ -197,23 +187,66 @@ button{
     }
     
 }
+
 @media screen and (max-width:900px){
     section{
         width: 50%;
         height: 120vh;
     }
-    .container{
+    .contentContainer{
         height:95%;
     }
     br{
         display: none;
     }
+    h1{
+    font-size: 2rem;
+    }
 }
+
+@media (max-width:750px){
+    nav{
+        height: 110px;
+    }
+    .navbarContainer{
+        flex-direction: column;
+        height: 90%;
+        transform: translate(0,10%);
+    }
+    nav img{
+        height: 60px;
+    }
+    nav ul{
+        width: 300px;
+    }
+}
+
 @media screen and (max-width:700px){
     section{
         width: 70%;
     }
 }
+
+@media (max-width:500px){
+
+    h1{
+        font-size: 1.55rem;
+    }
+
+    p{
+        font-size: 0.85rem;
+        margin-top: 20px;
+    }
+
+    section{
+        text-align: center;   
+    }
+
+    button{
+        margin: auto;
+    }
+}
+
 @media screen and (max-width:400px) {
     section{
         width: 80%;
@@ -221,16 +254,7 @@ button{
     
 }
 
-
-
-
-
-
-
-
-
 /* **********************VERTICAL-ALIN PROB********************************** */
-
 
 @media screen and (max-height:750px) and (min-width:1300px) {
 
@@ -239,21 +263,30 @@ button{
     }
     
 }
+
 @media screen and (max-height:600px) and (min-width:1300px){
     section{
         transform: translate(0,30%);
     }
     
 }
+
 @media screen and (max-height:500px) and (min-width:1300px){
     section{
         transform: translate(0,20%);
     }
     
 }
+
 @media screen and (max-height:400px) and (min-width:1300px){
     section{
         transform: translate(0,10%);
     }
     
+}
+
+@media screen and (min-height:750px) and (max-width:900px){
+    p{
+        line-height: 30px;
+    }
 }

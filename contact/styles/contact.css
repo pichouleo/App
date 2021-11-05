@@ -1,12 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,400;1,700&display=swap');
-@font-face {
-    font-family:"Nimbus bold" ;
-    src: url(/nimbus-sans-d-ot-cufonfonts/Nimbus-Sans-D-OT-Bold_32747.ttf);
-}
-@font-face {
-    font-family:"Nimbus light" ;
-    src: url(/nimbus-sans-d-ot-cufonfonts/Nimbus-Sans-D-OT-Light_32752.ttf);
-}
 
 *{
     margin: 0;
@@ -15,16 +7,19 @@
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
     list-style: none;
-
 }
-a:visited{
+
+/* **************************************************************NAVBAR************************************************************* */
+
+nav a:visited{
     color: #122448;
 }
 
 nav{
     height: 70px;
 }
-.container_navbar{
+
+.navbarContainer{
     height: 100%;
     width: 80%;
     margin: auto;
@@ -32,19 +27,20 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
+
 nav ul{
     display: flex;
     justify-content: space-between;
     width: 400px;
-    
 }
-nav a {
+
+nav a.no-active{
     display: inline-block;
     position: relative;
     color: #122448;
-  }
+}
   
-  nav a:after {
+nav a.no-active:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -55,33 +51,23 @@ nav a {
     background-color: #ffb34d;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
-  }
+}
   
-  nav a:hover:after {
+nav a.no-active:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
-  }
+}
+
+nav .is-active{
+    text-decoration: underline 2px #ffb34d;
+}
 
 nav img{
     height: 80%;
 }
-@media (max-width:750px){
-    nav{
-        height: 110px;
-    }
-    .container_navbar{
-        flex-direction: column;
-        height: 90%;
-        transform: translate(0,10%);
-    }
-    nav img{
-        height: 60px;
-    }
-    nav ul{
-        width: 300px;
-    }
-    
-}
+
+/* *******************************************************************SECTION**************************************************** */
+
 section{
     display: flex;
     justify-content: space-between;
@@ -90,31 +76,38 @@ section{
     width: 75%;
     text-align: center;
 }
+
 form{
     width: 500px;
     height: auto;
     margin-top: 70px;
 }
+
 form h1{
     color: #122448;
     font-size: 2.4rem;
 }
+
 form h1 span{
     color: #008379;
 }
+
 .hr{
     height: 1px;
     width: 60%;
     background-color: #ffb34d;
     margin: auto;
 }
+
 aside{
     margin: 30px;
 }
+
 input{
     border: none;
     outline: none;
 }
+
 .aside-first{
     margin-top: 50px;
 }
@@ -122,6 +115,7 @@ input{
 ::placeholder, i{
     color: grey;
 }
+
 i{
     margin-right: 20px;
 }
@@ -136,11 +130,13 @@ button{
     cursor: pointer;
     transition: .4s;
 }
+
 button:hover{
     background:#008379 ;
     color: white;
     transition: .4s;
 }
+
 section img{
     height: 600px;
 }
@@ -153,22 +149,22 @@ section img{
     margin: auto;
     margin-top: 20px;
 }
+
 #status.success{
     background-color: rgb(211,250,153);
 }
+
 #status.error{
     background-color: rgb(250,129, 92 );
     color: white;
 }
 
-
-
 .box {
     display: flex;
     padding: 10px;
-  }
+}
   
-  #checkbox {
+#checkbox {
     width: 55px;
     height: 55px;
     cursor: pointer;
@@ -178,11 +174,13 @@ section img{
     outline: none;
     background: #008379;
     position: relative;
-  }
-  #checkbox:hover {
+}
+
+#checkbox:hover {
     background: #06aa9c;
-  }
-  #checkbox::before {
+}
+
+#checkbox::before {
     content: '\f1e0';
     position: absolute;
     top: 50%;
@@ -193,20 +191,24 @@ section img{
     font-size: 1.5rem;
     color: white;
     transition: all 1.5s;
-  }
-  #checkbox:checked::before {
+}
+
+#checkbox:checked::before {
     content: '\f00d';
-  }
-  #checkbox:checked ~ .menu {
+}
+
+#checkbox:checked ~ .menu {
     width: 264px; /* 4 * 65 + 4 * 1 pour la bordure */
-  }
-  .menu {
+}
+
+.menu {
     width: 0;
      display: flex;
     overflow: hidden;
     transition: all .5s;
-  }
-  .menu .menuItems {
+}
+
+.menu .menuItems {
     width: 55px;
     height: 55px;
     background: #008379;
@@ -214,56 +216,92 @@ section img{
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .menu .menuItems:hover {
+}
+
+.menu .menuItems:hover {
     background: #06aa9c;
-  }
-  .menu .menuItems i {
+}
+
+.menu .menuItems i {
     font-size: 1.8rem;
     color: white;
     margin-left: 18px;
-   
-  }
+}
 
-
-
-
-
-
+/* **********************************************************************REPONSIVE******************************************************* */
 
 @media (max-width:1300px){
+
     section{
         padding-top: 0%;
         width: 90%;
     }
+
     form h1{
         font-size: 2.2rem;
     }
 }
 
 @media (max-width:1000px){
+
     section img{
         margin-top: 90px;
         width: initial;
         height: 400px;
     }
 }
+
 @media (max-width:800px){
     section img{
         display: none;
     }
+
     form{
         height: 410px;
-        
         margin: auto;
         margin-top: 40px;
     }
+
     section h1{
         font-size: 2rem;
     }
 }
+
+@media (max-width:750px){
+
+    nav{
+        height: 110px;
+    }
+
+    .navbarContainer{
+        flex-direction: column;
+        height: 90%;
+        transform: translate(0,10%);
+    }
+
+    nav img{
+        height: 60px;
+    }
+    
+    nav ul{
+        width: 300px;
+    }
+    
+}
+
 @media (max-width:500px){
+
     .box {
         margin-top:100px
       }
+}
+
+@media screen and (min-height:850px) and (max-width:1300px){
+    section{
+        transform: translate(0,20%);
+    }
+
+    .box {
+        margin-top: 100px;
+    }
 }
