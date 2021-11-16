@@ -165,7 +165,9 @@ section img{
 
 .box {
     display: flex;
-    padding: 10px;
+    bottom: 5px;
+    left: 5px;
+    position: absolute;
 }
   
 #checkbox {
@@ -307,5 +309,11 @@ section img{
 
     .box {
         margin-top: 100px;
+    }
+}
+
+@media (max-height:630px){
+    .box{
+        display: none;
     }
 }
