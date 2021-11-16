@@ -111,32 +111,24 @@ h1 span{
     height: 40vh;
     min-height: 300px;
     box-shadow: 0px 0px 20px 1px #333;
-    text-align: center;
+    position: relative;
+    transition: all .2s;
 }
 
-.Cart img{
-    width: 100%;
-    height: 220px;
+.Cart:hover{
+    filter: blur(2px);
 }
 
-.Cart button{
-    margin: 20px;
-    border: none;
-    background-color: transparent;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    background-color:#008379 ;
-    padding: 15px 11px;
-    transition: all .3s;
-    cursor: pointer;
-    border-radius: 50px;
-
+.Cart p{
+    position: absolute;
+    top: 44%;
+    left: 29%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-style: italic;
 }
 
-.Cart button:hover{
-    background-color: rgb(231, 231, 231);
-    color: #008379;
-}
 
 
 
