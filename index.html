@@ -6,55 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leo's Workout</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="img/muscle.png">
-    <meta name="description" content="The presentation of Léo PICHOU">
+    <link rel="icon" href="img/muscle.png" />
+    <meta name="description" content="The presentation of Léo PICHOU" />
     <script
       src="https://kit.fontawesome.com/880c1e3900.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <nav>
-      <div class="navbarContainer">
-        <img src="img/calendar.png" alt="PictureOfCalendar" />
-        <ul>
-          <li><a href="index.html" class="is-active">Home</a></li>
-          <li><a href="program/program.html" class="no-active">Program</a></li>
-          <li><a href="contact/contact.html" class="no-active">Contact</a></li>
-        </ul>
+    <nav class="navigation">
+      <a href="index.html" class="logo-lien">
+        <img src="img/LogoLeos'Workout.png" alt="logo" class="logo-image" />
+      </a>
+      <div class="liens">
+        <a href="index.html" class="nav-lien">Home</a>
+        <a href="program/program.html" class="nav-lien">Program</a>
+        <a href="contact/contact.html" class="nav-lien">Contact</a>
       </div>
     </nav>
-    <h1 class="big-title">
-      Hello dear gym enthusiast and<br /><span>Welcome</span> to Leo's Gym!
-    </h1>
-    <section class="aboutMe">
-      <div class="profilCart">
-        <div class="profilCartContainer">
-          <img src="img/photoMoi.jpg" alt="PictureOfMe" />
+    <section class="aboutMe" style="overflow: hidden;">
+      <h2 class="abouth2">About me</h2>
+      <h1 class="big-title">
+        Hello dear gym enthusiast<br />
+        and welcome to <span>Leo's Gym!</span>
+      </h1>
+      <img src="img/exempleBigIMG.jpg" alt="" class="imageAbout" style="width: 1000px;"/>
+      <section class="aboutMeContent">
+        <div class="firstBloc">
+          <h1>
+            Why
+            <span
+              >Leo's<br />
+              Workout</span
+            >
+            ?
+          </h1>
           <p>
-            I am 18 years old, and I am passionate about coding. I love
-            everything around web and creation of websites, so that's why I
-            decided to create one linked to my other passion.
-          </p>
-          <h2>PICHOU Léo</h2>
-          <h3>CESI student working at Altitude</h3>
-        </div>
-      </div>
-      <article class="textAbout">
-        <div class="textAboutContainer">
-          <h2>About It</h2>
-          <h1>Why <span>Leo's Gym ?</span></h1>
-          <p>
-            My other passion is gym, I started recently and I am not
-            ready to lose my motivation. I decided to create this site to allow
-            me to follow my program and to allow it to you as well.
-            So don't waste your time and go to the gym.
+            My other passion is gym, I started recently and I am not ready to
+            lose my motivation. I decided to create this site to allow me to
+            follow my program and to allow it to you as well. So don't waste
+            your time and go to the gym.
           </p>
           <a href="program/program.html">
             <button>See program</button>
           </a>
         </div>
-      </article>
+        <div class="secondBloc">
+          <img src="img/testPersonne.jpg" alt="" style="width: 230px" />
+          <div class="thirdBloc">
+            <div class="thirdBlocCContainer">
+              <div class="guillemet">
+                <img src="img/Guillemet.png" alt="" style="width: 30px" />
+              </div>
+              <p>
+                I am 18 years old, and I am passionate about coding. I love
+                everything around web and creation of websites, so that's why I
+                decided to create one linked to my other passion.
+              </p>
+              <div class="description">
+                PICHOU Leo, CESI student working at Altitude
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
   </body>
 </html>
