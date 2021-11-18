@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@font-face {
+    font-family: 'Raleway Medium';
+    src: url(/Raleway/static/Raleway-Medium.ttf);
+}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Raleway Medium';
     text-decoration: none;
     list-style: none;
 }
@@ -112,21 +113,19 @@ form{
 }
 
 form h1{
-    color: #122448;
-    font-size: 3rem;
-    font-family: 'Oswald', sans-serif;
+    color: #44566c;
+    font-size: 4rem;
 
 }
 
 form h1 span{
-    color: #008379;
-    font-family: 'Oswald', sans-serif;
+    color: #4b8ca3;
 }
 
 .hr{
     height: 1px;
     width: 60%;
-    background-color: #ffb34d;
+    background-color: #44566c;
     margin: auto;
 }
 
@@ -153,17 +152,18 @@ i{
 
 button{
     margin-top: 20px;
-    border: 1px solid #008379;
+    border: 1px solid #4b8ca3;
     background: none;
     padding: 10px 30px;
     border-radius: 2px;
-    color: #008379;
+    color: #4b8ca3;
     cursor: pointer;
     transition: .4s;
+    text-transform: uppercase;
 }
 
 button:hover{
-    background:#008379 ;
+    background:#4b8ca3; ;
     color: white;
     transition: .4s;
 }
@@ -205,12 +205,12 @@ section img{
     -moz-appearance: none;
     -webkit-appearance: none;
     outline: none;
-    background: #008379;
+    background: #4b8ca3;
     position: relative;
 }
 
 #checkbox:hover {
-    background: #06aa9c;
+    background: #44566c;
 }
 
 #checkbox::before {
@@ -244,7 +244,7 @@ section img{
 .menu .menuItems {
     width: 55px;
     height: 55px;
-    background: #008379;
+    background: #4b8ca3;
     border-left: 1px solid rgb(165, 165, 165);
     display: flex;
     justify-content: center;
@@ -252,7 +252,7 @@ section img{
 }
 
 .menu .menuItems:hover {
-    background: #06aa9c;
+    background: #44566c;
 }
 
 .menu .menuItems i {
@@ -268,10 +268,6 @@ section img{
     section{
         padding-top: 0%;
         width: 90%;
-    }
-
-    form h1{
-        font-size: 2.2rem;
     }
 }
 
@@ -293,10 +289,6 @@ section img{
         height: 410px;
         margin: auto;
         margin-top: 40px;
-    }
-
-    section h1{
-        font-size: 2rem;
     }
 }
 
