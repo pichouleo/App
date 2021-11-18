@@ -244,3 +244,9 @@ h1 span{
     }
 
 }   
+
+@media (max-width:450px){
+    h1, h1 span{
+    font-size: 3rem;
+    }
+}

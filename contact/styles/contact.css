@@ -315,3 +315,9 @@ section img{
         display: none;
     }
 }
+
+@media (max-width:450px){
+    form h1{
+    font-size: 3rem;
+    }
+}

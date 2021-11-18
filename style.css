@@ -282,6 +282,7 @@ section.aboutMe{
         display: flex;
         position: relative;
         margin: 120px auto 300px auto;
+        text-align: center;
         
     }
 
@@ -336,6 +337,12 @@ section.aboutMe{
         
     }
     
+}
+
+@media (max-width:450px){
+    .big-title, .firstBloc h1{
+    font-size: 3rem;
+    }
 }
 
 
