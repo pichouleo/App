@@ -134,8 +134,8 @@ aside{
 }
 
 input{
-    border: none;
     outline: none;
+    border: none;
 }
 
 .aside-first{
